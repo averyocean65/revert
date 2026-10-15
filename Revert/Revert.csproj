@@ -45,6 +45,8 @@
 
         <Reference Include="$(ManagedDir)/UnityEngine.dll"/>
         <Reference Include="$(ManagedDir)/UnityEngine.CoreModule.dll"/>
+
+        <Reference Include="$(BepInExPlugins)/AUU.dll"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="CameraUtilities.cs" />

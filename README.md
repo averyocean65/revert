@@ -2,6 +2,9 @@
 A template for ULTRAKILL mods!
 
 # Development
+## Dependencies
+- [AUU](https://thunderstore.io/c/ultrakill/p/averyocean65/AUU/), located at `BepInEx/plugins/AUU.dll`
+
 ## Using a custom ULTRAKILL path?
 If you're using a custom ULTRAKILL path, for example to preserve hard drive space on your OS partition, or for other reasons, ULTRAPORTAL will not compile out of the box.
 You need to create a file in the project root directory called `ULTRAKILLPATH.user`, where you can specify your custom game path like this:

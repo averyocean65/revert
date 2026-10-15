@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3744e0d-d2d7-4dfd-b089-f55542c0f7aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Revert/Commands/FreecamCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Revert/FreecamManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Revert/Revert.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.retract/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.retract/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.retract/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.retract/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.retract/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.retract/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Retract/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Plugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Retract/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Retract/Retract.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retract.sln" beforeDir="false" afterPath="$PROJECT_DIR$/revert.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revert/Revert.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Revert.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +29,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Retract/Commands/CommandsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Retract/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Revert/CameraUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Commands/CommandsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Commands/RevertCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/FreecamManager.cs" root0="FORCE_HIGHLIGHTING" />
