@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMod", "MyMod\MyMod.csproj", "{51A6E9E2-CCF2-4A4D-A4EA-2A3A97C9C851}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retract", "Retract\Retract.csproj", "{51A6E9E2-CCF2-4A4D-A4EA-2A3A97C9C851}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
