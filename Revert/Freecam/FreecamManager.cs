@@ -1,8 +1,6 @@
-﻿using System.Runtime.Remoting.Messaging;
-using GameConsole;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Revert {
+namespace Revert.Freecam {
 	public static class FreecamManager {
 		public static bool IsEnabled { get; private set; } = false;
 		private static Camera _freecamCamera;

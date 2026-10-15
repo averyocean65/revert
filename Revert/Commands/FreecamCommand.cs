@@ -1,4 +1,5 @@
 ﻿using GameConsole;
+using Revert.Freecam;
 
 namespace Revert.Commands {
 	public class FreecamCommand : ICommand {
