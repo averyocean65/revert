@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Revert.Freecam {
 	public class FreecamLooker : MonoSingleton<FreecamLooker> {
