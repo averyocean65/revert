@@ -8,8 +8,8 @@
         <ProjectGuid>{51A6E9E2-CCF2-4A4D-A4EA-2A3A97C9C851}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>MyMod</RootNamespace>
-        <AssemblyName>Retract</AssemblyName>
+        <RootNamespace>Revert</RootNamespace>
+        <AssemblyName>Revert</AssemblyName>
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -47,6 +47,10 @@
         <Reference Include="$(ManagedDir)/UnityEngine.CoreModule.dll"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CameraUtilities.cs" />
+        <Compile Include="Commands\CommandsManager.cs" />
+        <Compile Include="Commands\FreecamCommand.cs" />
+        <Compile Include="FreecamManager.cs" />
         <Compile Include="Plugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>

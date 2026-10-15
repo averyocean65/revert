@@ -1,8 +1,10 @@
 using BepInEx;
+using Revert.Commands;
+using UnityEngine;
 
-namespace MyMod {
+namespace Revert {
 	[BepInPlugin(PluginInfo.GUID, PluginInfo.NAME, PluginInfo.VERSION)]
-	public class Plugin : BaseUnityPlugin {
+	internal class Plugin : BaseUnityPlugin {
 		private static class PluginInfo {
 			public const string GUID = "com.averyocean65.revert";
 			public const string NAME = "Revert";
@@ -10,7 +12,10 @@ namespace MyMod {
 		}
 
 		private void Start() {
-			Logger.LogInfo("Hello, World!");
+			gameObject.hideFlags = HideFlags.HideAndDontSave;
+			DontDestroyOnLoad(gameObject);
+			
+			CommandsManager.RegisterAll();
 		}
 	}
 }
