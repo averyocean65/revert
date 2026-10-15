@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Runtime.Remoting.Messaging;
+using GameConsole;
+using UnityEngine;
 
 namespace Revert {
 	public static class FreecamManager {
@@ -24,6 +26,11 @@ namespace Revert {
 		}
 		
 		public static void Toggle(bool state) {
+			if (!AUU.SceneUtils.IsInLevel()) {
+				Debug.LogError("You can only use the freecam command in a level!");
+				return;
+			}
+			
 			IsEnabled = state;
 			
 			InitializeCamera();
