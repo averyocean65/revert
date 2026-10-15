@@ -48,12 +48,14 @@
 
         <Reference Include="$(ManagedDir)/UnityEngine.IMGUIModule.dll"/>
 
+        <Reference Include="$(BepInExPlugins)/Configgy.dll"/>
         <Reference Include="$(BepInExPlugins)/AUU.dll"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="CameraUtilities.cs" />
         <Compile Include="Commands\CommandsManager.cs" />
         <Compile Include="Commands\FreecamCommand.cs" />
+        <Compile Include="Config.cs" />
         <Compile Include="Freecam\FreecamController.cs" />
         <Compile Include="Freecam\FreecamManager.cs" />
         <Compile Include="Plugin.cs" />

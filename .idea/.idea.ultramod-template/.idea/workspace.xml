@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3744e0d-d2d7-4dfd-b089-f55542c0f7aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Revert/Config.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Revert/Freecam/FreecamController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Freecam/FreecamController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revert/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Plugin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revert/Revert.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Revert.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +30,14 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7ec25b6bcb4e4850bf0d5fc78e74e80d20000/42/32aa4dfa/ConfigValueElement`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e51acc224003413ab08426f7352466992ab000/72/763671f9/MonoSingleton`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Retract/Commands/CommandsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Retract/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/CameraUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Commands/CommandsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Commands/RevertCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Revert/Config.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Freecam/FreecamController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/FreecamManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Plugin.cs" root0="FORCE_HIGHLIGHTING" />

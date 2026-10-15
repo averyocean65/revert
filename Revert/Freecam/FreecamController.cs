@@ -13,7 +13,14 @@ namespace Revert.Freecam {
 				return;
 			}
 
-			_speed = InputManager.Instance.InputSource.Dodge.IsPressed ? _slowMovementSpeed : _regularMovementSpeed;
+			if (Config.AllowShiftMovement.Value) {
+				_speed = InputManager.Instance.InputSource.Dodge.IsPressed
+					? Config.ShiftMovementSpeed.Value
+					: Config.RegularMovementSpeed.Value;
+			}
+			else {
+				_speed = Config.RegularMovementSpeed.Value;
+			}
 
 			if (InputManager.Instance.InputSource.Jump.IsPressed) {
 				transform.position += transform.up * _speed * Time.deltaTime;

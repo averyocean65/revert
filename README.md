@@ -4,6 +4,7 @@ A template for ULTRAKILL mods!
 # Development
 ## Dependencies
 - [AUU](https://thunderstore.io/c/ultrakill/p/averyocean65/AUU/), located at `BepInEx/plugins/AUU.dll`
+- [Configgy](https://thunderstore.io/c/ultrakill/p/Hydraxous/Configgy/), located at `BepInEx/plugins/Configgy.dll`
 
 ## Using a custom ULTRAKILL path?
 If you're using a custom ULTRAKILL path, for example to preserve hard drive space on your OS partition, or for other reasons, ULTRAPORTAL will not compile out of the box.
