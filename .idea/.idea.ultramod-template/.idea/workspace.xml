@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3744e0d-d2d7-4dfd-b089-f55542c0f7aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Revert/Config.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ultramod-template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Revert/Freecam/FreecamLooker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revert/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Config.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Revert/Freecam/FreecamController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Freecam/FreecamController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Revert/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Plugin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Revert/Revert.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Revert/Revert.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Revert/Commands/RevertCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Config.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Freecam/FreecamController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Revert/Freecam/FreecamLooker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/FreecamManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Revert/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
   </component>

@@ -9,6 +9,10 @@ namespace Revert.Freecam {
 		private float _speed;
 		
 		private void Update() {
+			if (OptionsManager.Instance.paused) {
+				return;
+			}
+			
 			if (InputManager.Instance == null) {
 				return;
 			}

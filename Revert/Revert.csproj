@@ -57,6 +57,7 @@
         <Compile Include="Commands\FreecamCommand.cs" />
         <Compile Include="Config.cs" />
         <Compile Include="Freecam\FreecamController.cs" />
+        <Compile Include="Freecam\FreecamLooker.cs" />
         <Compile Include="Freecam\FreecamManager.cs" />
         <Compile Include="Plugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
