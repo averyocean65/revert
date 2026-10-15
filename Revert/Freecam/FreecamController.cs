@@ -14,7 +14,15 @@ namespace Revert.Freecam {
 			}
 
 			_speed = InputManager.Instance.InputSource.Dodge.IsPressed ? _slowMovementSpeed : _regularMovementSpeed;
+
+			if (InputManager.Instance.InputSource.Jump.IsPressed) {
+				transform.position += transform.up * _speed * Time.deltaTime;
+			}
 			
+			if (InputManager.Instance.InputSource.Slide.IsPressed) {
+				transform.position -= transform.up * _speed * Time.deltaTime;
+			}
+
 			_movementInput = InputManager.Instance.InputSource.Move.ReadValue<Vector2>();
 			Vector3 movementVector = transform.right * _movementInput.x + transform.forward * _movementInput.y;
 			
