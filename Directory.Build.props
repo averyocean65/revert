@@ -1,0 +1,14 @@
+<Project>
+    <Import Condition="Exists('ULTRAKILLPATH.user')" Project="ULTRAKILLPATH.user"/>
+
+    <PropertyGroup Condition="$(ULTRAKILLPath) == ''">
+        <ULTRAKILLPath>C:/Program Files (x86)/Steam/steamapps/common/ULTRAKILL/</ULTRAKILLPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ManagedDir>$(ULTRAKILLPath)/ULTRAKILL_Data/Managed/</ManagedDir>
+        <BepInExRoot>$(ULTRAKILLPath)/BepInEx/</BepInExRoot>
+        <BepInExCore>$(BepInExRoot)/core/</BepInExCore>
+        <BepInExPlugins>$(BepInExRoot)/plugins/</BepInExPlugins>
+    </PropertyGroup>
+</Project>
