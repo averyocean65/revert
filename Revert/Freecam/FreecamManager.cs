@@ -12,6 +12,7 @@ namespace Revert.Freecam {
 		private static void InitializeCamera() {
 			if (!_freecamCamera) {
 				GameObject cameraOwner = new GameObject("Revert Freecam");
+				cameraOwner.AddComponent<FreecamController>();
 				_freecamCamera = cameraOwner.AddComponent<Camera>();
 				_freecamCamera.cullingMask = CameraUtilities.Main.cullingMask;
 			}
