@@ -1,7 +1,7 @@
-using System;
 using BepInEx;
 using Configgy;
 using Revert.Commands;
+using Revert.Recording;
 using UnityEngine;
 
 namespace Revert {
@@ -26,6 +26,20 @@ namespace Revert {
 			DontDestroyOnLoad(gameObject);
 			
 			CommandsManager.RegisterAll();
+
+			GameObject recordingManager = new GameObject("Revert Recording Manager");
+			recordingManager.AddComponent<RecordingManager>();
+		}
+
+		private void Update() {
+			if (Input.GetKeyDown(Revert.Config.RecordingKeybind.Value)) {
+				if (RecordingManager.Instance.IsRecording) {
+					RecordingManager.Instance.EndRecording();
+				}
+				else {
+					RecordingManager.Instance.BeginRecording();
+				}
+			}
 		}
 	}
 }

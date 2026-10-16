@@ -5,11 +5,11 @@ namespace Revert.Recording {
 		protected int RecordingIndex = 0;
 		
 		private void Awake() {
-			RecordingManager.Instance.onStartRecording.AddListener(OnStartRecording);
-			RecordingManager.Instance.onEndRecording.AddListener(OnEndRecording);
-			RecordingManager.Instance.onHeartbeat.AddListener(OnHeartbeat);
+			RecordingManager.Instance.onStartRecording += OnStartRecording;
+			RecordingManager.Instance.onEndRecording += OnEndRecording;
+			RecordingManager.Instance.onHeartbeat += OnHeartbeat;
 			
-			RecordingManager.Instance.onStartReplay.AddListener(recordingIndex => {
+			RecordingManager.Instance.onStartReplay += (recordingIndex => {
 				PlayRecordingSegment(recordingIndex, 0);
 			});
 		}

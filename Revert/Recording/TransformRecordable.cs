@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
+using BepInEx.Logging;
 using UnityEngine;
 
 namespace Revert.Recording {
 	public class TransformRecordable : Recordable {
+		private static ManualLogSource _logger = BepInEx.Logging.Logger.CreateLogSource("Revert TransformRecordable");
+		
 		struct TransformRecording {
 			public Vector3 position;
 			public Vector3 eulerAngles;
@@ -17,6 +20,8 @@ namespace Revert.Recording {
 		}
 
 		protected override void OnHeartbeat() {
+			_logger.LogInfo($"heartbeat {_recordings[RecordingIndex].Count + 1}!");
+			
 			_recordings[RecordingIndex].Add(new TransformRecording() {
 				position = transform.position,
 				eulerAngles = transform.eulerAngles,
@@ -25,6 +30,8 @@ namespace Revert.Recording {
 		}
 
 		protected override void PlayRecordingSegment(int recordingIndex, int partIndex) {
+			_logger.LogInfo($"playing segment {recordingIndex}:{partIndex}!");
+			
 			TransformRecording part = _recordings[recordingIndex][partIndex];
 			transform.position = part.position;
 			transform.eulerAngles = part.eulerAngles;

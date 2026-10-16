@@ -10,5 +10,7 @@ namespace Revert {
 		[Configgable("Freecam")] public static ConfigToggle InvertMouseY = new ConfigToggle(false);
 		
 		[Configgable("Freecam")] public static ConfigToggle AllowShiftMovement = new ConfigToggle(true);
+
+		[Configgable("Input")] public static ConfigKeybind RecordingKeybind = new ConfigKeybind(KeyCode.F5);
 	}
 }

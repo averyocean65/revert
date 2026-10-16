@@ -46,6 +46,7 @@
         <Reference Include="$(ManagedDir)/UnityEngine.dll"/>
         <Reference Include="$(ManagedDir)/UnityEngine.CoreModule.dll"/>
 
+        <Reference Include="$(ManagedDir)/UnityEngine.InputLegacyModule.dll"/>
         <Reference Include="$(ManagedDir)/UnityEngine.IMGUIModule.dll"/>
 
         <Reference Include="$(BepInExPlugins)/Configgy.dll"/>

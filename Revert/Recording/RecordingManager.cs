@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,57 +9,72 @@ namespace Revert.Recording {
 		private const float HEARTBEAT_WAIT = 0.1f;
 
 		public int CurrentRecordingIndex { get; private set; }
+		public bool IsRecording { get; private set; }
 		
-		public UnityEvent onStartRecording;
-		public UnityEvent onEndRecording;
-		public UnityEvent onHeartbeat;
+		public Action onStartRecording;
+		public Action onEndRecording;
+		public Action onHeartbeat;
 		
-		public UnityEvent<int> onStartReplay;
-		
-		private bool _isRecording;
+		public Action<int> onStartReplay;
 
 		private GameObject _testCube;
-		private TransformRecordable _testRecordable;
+		private Follow _testFollow;
 		
 		public void BeginRecording() {
-			if (_isRecording) {
+			if (IsRecording) {
 				return;
 			}
 			
-			_isRecording = true;
-			onStartRecording.Invoke();
+			IsRecording = true;
 
-#region Testing
-
+			#region Testing
+			
 			if (!_testCube) {
 				_testCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-				Follow follow = _testCube.AddComponent<Follow>(); // according to the decomp, if the target isn't set it's the player
-				_testRecordable = _testCube.AddComponent<TransformRecordable>();
+				_testFollow = _testCube.AddComponent<Follow>(); // according to the decomp, if the target isn't set it's the player
+				_testCube.AddComponent<TransformRecordable>();
 			}
-			
+
+			_testFollow.enabled = true;
 #endregion
 
+			if (onStartRecording != null) {
+				onStartRecording.Invoke();
+			}
+			
 			StartCoroutine(IRecordingHeartbeats());
-			CurrentRecordingIndex++;
 		}
 
 		public void EndRecording() {
-			if (!_isRecording) {
+			if (!IsRecording) {
 				return;
 			}
 
-			_isRecording = false;
-			onEndRecording.Invoke();
-			
+			IsRecording = false;
+
+			if (onEndRecording != null) {
+				onEndRecording.Invoke();
+			}
+
+			if (_testFollow) {
+				_testFollow.enabled = false;
+			}
+
 			StopAllCoroutines();
+			CurrentRecordingIndex++;
 		}
 
-		public void StartReplayRecording(int recordingIndex) {
-			onStartReplay.Invoke(recordingIndex);
+		public void ReplayRecording(int recordingIndex) {
+			if (onStartReplay != null) {
+				onStartReplay.Invoke(recordingIndex);
+			}
 		}
 
 		IEnumerator IRecordingHeartbeats() {
-			onHeartbeat.Invoke();
+			if (onHeartbeat != null) {
+				onHeartbeat.Invoke();
+			}
+			
 			yield return new WaitForSeconds(HEARTBEAT_WAIT);
 			StartCoroutine(IRecordingHeartbeats());
 		}

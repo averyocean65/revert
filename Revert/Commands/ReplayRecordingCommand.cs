@@ -15,7 +15,7 @@ namespace Revert.Commands {
 				return;
 			}
 			
-			RecordingManager.Instance.StartReplayRecording(index);
+			RecordingManager.Instance.ReplayRecording(index);
 		}
 	}
 }
