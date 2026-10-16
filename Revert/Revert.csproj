@@ -55,6 +55,7 @@
         <Compile Include="CameraUtilities.cs" />
         <Compile Include="Commands\CommandsManager.cs" />
         <Compile Include="Commands\FreecamCommand.cs" />
+        <Compile Include="Commands\ReplayRecordingCommand.cs" />
         <Compile Include="Config.cs" />
         <Compile Include="Freecam\FreecamController.cs" />
         <Compile Include="Freecam\FreecamLooker.cs" />
