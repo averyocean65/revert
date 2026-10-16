@@ -8,6 +8,10 @@ namespace Revert.Recording {
 			RecordingManager.Instance.onStartRecording.AddListener(OnStartRecording);
 			RecordingManager.Instance.onEndRecording.AddListener(OnEndRecording);
 			RecordingManager.Instance.onHeartbeat.AddListener(OnHeartbeat);
+			
+			RecordingManager.Instance.onStartReplay.AddListener(recordingIndex => {
+				PlayRecordingSegment(recordingIndex, 0);
+			});
 		}
 
 		protected virtual void OnStartRecording() { }

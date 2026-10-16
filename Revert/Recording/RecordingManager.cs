@@ -11,7 +11,12 @@ namespace Revert.Recording {
 		public UnityEvent onEndRecording;
 		public UnityEvent onHeartbeat;
 		
+		public UnityEvent<int> onStartReplay;
+		
 		private bool _isRecording;
+
+		private GameObject _testCube;
+		private TransformRecordable _testRecordable;
 		
 		public void BeginRecording() {
 			if (_isRecording) {
@@ -21,6 +26,16 @@ namespace Revert.Recording {
 			_isRecording = true;
 			onStartRecording.Invoke();
 
+#region Testing
+
+			if (!_testCube) {
+				_testCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+				Follow follow = _testCube.AddComponent<Follow>(); // according to the decomp, if the target isn't set it's the player
+				_testRecordable = _testCube.AddComponent<TransformRecordable>();
+			}
+			
+#endregion
+			
 			StartCoroutine(IRecordingHeartbeats());
 		}
 
@@ -33,6 +48,10 @@ namespace Revert.Recording {
 			onEndRecording.Invoke();
 			
 			StopAllCoroutines();
+		}
+
+		public void StartReplayRecording(int recordingIndex) {
+			onStartReplay.Invoke(recordingIndex);
 		}
 
 		IEnumerator IRecordingHeartbeats() {
