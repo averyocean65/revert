@@ -6,6 +6,8 @@ using UnityEngine.Events;
 namespace Revert.Recording {
 	public class RecordingManager : MonoSingleton<RecordingManager> {
 		private const float HEARTBEAT_WAIT = 0.1f;
+
+		public int CurrentRecordingIndex { get; private set; }
 		
 		public UnityEvent onStartRecording;
 		public UnityEvent onEndRecording;
@@ -35,8 +37,9 @@ namespace Revert.Recording {
 			}
 			
 #endregion
-			
+
 			StartCoroutine(IRecordingHeartbeats());
+			CurrentRecordingIndex++;
 		}
 
 		public void EndRecording() {
