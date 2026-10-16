@@ -17,5 +17,6 @@ namespace Revert.Recording {
 		}
 
 		protected abstract void OnHeartbeat();
+		protected abstract void PlayRecordingSegment(int recordingIndex, int partIndex);
 	}
 }
