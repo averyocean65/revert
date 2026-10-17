@@ -12,5 +12,7 @@ namespace Revert {
 		[Configgable("Freecam")] public static ConfigToggle AllowShiftMovement = new ConfigToggle(true);
 
 		[Configgable("Input")] public static ConfigKeybind RecordingKeybind = new ConfigKeybind(KeyCode.F5);
+
+		[Configgable("Recording")] public static ConfigInputField<float> HeartbeatWait = new ConfigInputField<float>(0.01f);
 	}
 }

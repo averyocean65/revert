@@ -35,7 +35,7 @@ namespace Revert.Recording {
 			
 			for (int i = 0; i < Recordings[recordingIndex].Count; i++) {
 				PlayRecordingSegment(recordingIndex, i);
-				yield return new WaitForSeconds(RecordingManager.HeartbeatWait);
+				yield return new WaitForSeconds(Config.HeartbeatWait.Value);
 			}
 		}
 	}
