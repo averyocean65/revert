@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Revert.Recording {
 	public abstract class Recordable<T> : MonoBehaviour {
@@ -16,6 +17,10 @@ namespace Revert.Recording {
 			
 			RecordingManager.Instance.onStartReplay += recordingIndex => {
 				StartCoroutine(IPlayBackRecording(recordingIndex));
+			};
+
+			SceneManager.sceneLoaded += (scene, loadMode) => {
+				ClearRecordings();
 			};
 		}
 
@@ -37,6 +42,10 @@ namespace Revert.Recording {
 				PlayRecordingSegment(recordingIndex, i);
 				yield return new WaitForSeconds(Config.HeartbeatWait.Value);
 			}
+		}
+
+		public void ClearRecordings() {
+			Recordings.Clear();
 		}
 	}
 }
