@@ -13,6 +13,6 @@ namespace Revert {
 
 		[Configgable("Input")] public static ConfigKeybind RecordingKeybind = new ConfigKeybind(KeyCode.F5);
 
-		[Configgable("Recording")] public static ConfigInputField<float> HeartbeatWait = new ConfigInputField<float>(0.01f);
+		[Configgable("Recording")] public static ConfigInputField<float> HeartbeatWait = new ConfigInputField<float>(0.1f);
 	}
 }
