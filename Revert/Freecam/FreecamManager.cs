@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ULTRAKILL.Portal;
+using UnityEngine;
 
 namespace Revert.Freecam {
 	public static class FreecamManager {
@@ -14,6 +15,13 @@ namespace Revert.Freecam {
 				GameObject cameraOwner = new GameObject("Revert Freecam");
 				cameraOwner.AddComponent<FreecamController>();
 				cameraOwner.AddComponent<FreecamLooker>();
+
+				cameraOwner.AddComponent<PortalAudioListener>();
+				
+				Rigidbody rb = cameraOwner.AddComponent<Rigidbody>();
+				rb.isKinematic = true;
+				
+				cameraOwner.AddComponent<SimplePortalTraveler>();
 				
 				_freecamCamera = cameraOwner.AddComponent<Camera>();
 				_freecamCamera.cullingMask = CameraUtilities.Main.cullingMask;

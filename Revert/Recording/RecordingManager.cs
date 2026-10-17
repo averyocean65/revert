@@ -30,6 +30,9 @@ namespace Revert.Recording {
 				Destroy(_testCube.GetComponent<BoxCollider>());
 				
 				_testFollow = _testCube.AddComponent<Follow>(); // according to the decomp, if the target isn't set it's the player
+				_testFollow.mimicPosition = true;
+				_testFollow.mimicRotation = true;
+				
 				_testCube.AddComponent<TransformRecordable>();
 			}
 
