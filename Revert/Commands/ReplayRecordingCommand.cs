@@ -1,4 +1,5 @@
 ﻿using GameConsole;
+using Revert.Freecam;
 using Revert.Recording;
 
 namespace Revert.Commands {
@@ -14,7 +15,8 @@ namespace Revert.Commands {
 			} else if (!int.TryParse(args[0], out index)) {
 				return;
 			}
-			
+		
+			FreecamManager.Toggle(true);
 			RecordingManager.Instance.ReplayRecording(index);
 		}
 	}

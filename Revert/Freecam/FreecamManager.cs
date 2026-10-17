@@ -27,6 +27,10 @@ namespace Revert.Freecam {
 		}
 		
 		public static void Toggle(bool state) {
+			if (state == IsEnabled) {
+				return;
+			}
+			
 			if (!AUU.SceneUtils.IsInLevel()) {
 				Debug.LogError("You can only use the freecam command in a level!");
 				return;
