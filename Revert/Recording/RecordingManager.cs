@@ -27,6 +27,8 @@ namespace Revert.Recording {
 			
 			if (!_testCube) {
 				_testCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+				Destroy(_testCube.GetComponent<BoxCollider>());
+				
 				_testFollow = _testCube.AddComponent<Follow>(); // according to the decomp, if the target isn't set it's the player
 				_testCube.AddComponent<TransformRecordable>();
 			}
