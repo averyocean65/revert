@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Revert.Recording {
 	public class RecordingManager : MonoSingleton<RecordingManager> {
-		public const float HeartbeatWait = 0.1f;
+		public const float HeartbeatWait = 0.05f;
 
 		public int CurrentRecordingIndex { get; private set; }
 		public bool IsRecording { get; private set; }
